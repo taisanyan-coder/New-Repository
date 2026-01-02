@@ -114,9 +114,9 @@ export function validatePlayers(players: Player[]): ValidationResult {
     }
   }
 
-  if (![8, 12, 16, 20].includes(players.length)) {
-    errors.push('人数は 8/12/16/20 のいずれか（4の倍数）');
-  }
+  if (![8, 12, 16, 20, 24, 28, 32].includes(players.length)) {
+  errors.push('人数は 8/12/16/20/24/28/32 のいずれか（4の倍数）');
+}
 
   return { ok: errors.length === 0, errors };
 }
